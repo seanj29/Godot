@@ -5,9 +5,11 @@ var speed = 400
 var angular_speed = PI
 var timestep = 0
 
+onready var timer = get_node("Timer")
+
 
 func _ready():
-	var timer = get_node("Timer")
+	
 	timer.connect("timeout", self, "_on_Timer_timeout")
 
 func _process(delta):
